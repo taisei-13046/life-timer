@@ -8,9 +8,8 @@ import { EndAgeQuestion } from "../molecules/EndAgeQuestion"
 import { Title } from "../molecules/Tiele"
 import { SendButton } from "../atoms/SendButton"
 
-export const MainPage = () => {
-	const [age, setAge] = useState('');
-	const [endAge, setEndAge] = useState('');
+export const MainPage = (props) => {
+	const {age, setAge, endAge, setEndAge} = props;
 	return (
 		<div>
 			<Svideo src={video} autoPlay loop muted></Svideo>
