@@ -1,18 +1,23 @@
-import React from "react"
-import { Question } from "../molecules/Question"
-import { Title } from "../molecules/Tiele"
+import React, {useState} from "react"
+import { useHistory } from "react-router-dom";
 import video from "../../img/clock2.mp4"
 import styled from "styled-components"
 
+import { AgeQuestion } from "../molecules/AgeQuestion"
+import { EndAgeQuestion } from "../molecules/EndAgeQuestion"
+import { Title } from "../molecules/Tiele"
+import { SendButton } from "../atoms/SendButton"
+
 export const MainPage = () => {
+	const [age, setAge] = useState('');
+	const [endAge, setEndAge] = useState('');
 	return (
 		<div>
 			<Svideo src={video} autoPlay loop muted></Svideo>
 			<Title></Title>
-			<Question>今は何歳ですか？</Question>
-			<Question>何歳まで生きる予定？</Question>
-			<br />
-			<button type="submit">測定</button>
+			<AgeQuestion age={age} setAge={setAge} />
+			<EndAgeQuestion endAge={endAge} setEndAge={setEndAge} />
+			<SendButton />
 		</div>
 	)
 }

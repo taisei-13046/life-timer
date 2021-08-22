@@ -3,12 +3,12 @@ import styled from "styled-components"
 
 import { DropDownAge } from "../atoms/DropDownAge"
 
-export const Question = (props) => {
-	const { children } = props;
+export const AgeQuestion = (props) => {
+	const {age, setAge} = props;
 	return (
 		<>
-			<SquestionDiv>{children}</SquestionDiv>
-			<DropDownAge />
+			<SquestionDiv>今は何歳ですか？</SquestionDiv>
+			<DropDownAge age={age} setAge={setAge} />
 		</>
 	)
 }
