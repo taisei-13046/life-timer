@@ -4,4 +4,6 @@
 
 ### 技術: React, material-ui
 
+### 制作期間: 1.5日
+
 ### URL: https://life-timer-e3df9.web.app/
